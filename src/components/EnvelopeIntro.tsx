@@ -37,9 +37,8 @@ export function EnvelopeIntro({ onComplete }: { onComplete: () => void }) {
   };
 
   return (
-    <AnimatePresence>
-      {state !== "complete" || true ? (
-        <motion.div
+    <motion.div
+
           className="fixed inset-0 z-50 overflow-hidden bg-[#F6E4E4]"
           role="button"
           tabIndex={0}
