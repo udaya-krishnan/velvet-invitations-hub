@@ -166,3 +166,60 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: var(--font-serif);
+    overflow-x: hidden;
+  }
+  .is-locked {
+    overflow: hidden;
+    height: 100svh;
+  }
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+}
+
+@utility tracking-luxe {
+  letter-spacing: 0.32em;
+}
+
+@utility text-gold-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--gold) 0%,
+    var(--champagne) 45%,
+    var(--gold) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gold-rule {
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--champagne),
+    var(--gold),
+    var(--champagne),
+    transparent
+  );
+}
+
+@utility card-luxe {
+  background-color: var(--soft-white);
+  border: 1px solid color-mix(in oklab, var(--champagne) 60%, transparent);
+  box-shadow: 0 18px 40px -32px color-mix(in oklab, var(--deep-text) 40%, transparent);
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
