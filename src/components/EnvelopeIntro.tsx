@@ -38,39 +38,37 @@ export function EnvelopeIntro({ onComplete }: { onComplete: () => void }) {
 
   return (
     <motion.div
-
-          className="fixed inset-0 z-50 overflow-hidden bg-[#F6E4E4]"
-          role="button"
-          tabIndex={0}
-          aria-label="Open the invitation"
-          onClick={open}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") open();
-          }}
-          animate={{ opacity: state === "complete" ? 0 : 1 }}
-          transition={{ duration: 0.65, ease: "easeInOut" }}
-          style={{ minHeight: "100svh", cursor: state === "closed" ? "pointer" : "default" }}
-        >
-          <img
-            src={envelopeClosed.url}
-            alt="Sealed wedding envelope"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            style={{ opacity: state === "closed" ? 1 : 0, transition: "opacity 120ms linear" }}
-          />
-          <video
-            ref={videoRef}
-            src={envelopeOpening.url}
-            muted
-            playsInline
-            preload="auto"
-            disablePictureInPicture
-            controls={false}
-            onEnded={finish}
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            style={{ opacity: state === "closed" ? 0 : 1, transition: "opacity 180ms linear" }}
-          />
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
+      className="fixed inset-0 z-50 overflow-hidden bg-[#F6E4E4]"
+      role="button"
+      tabIndex={0}
+      aria-label="Open the invitation"
+      onClick={open}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") open();
+      }}
+      animate={{ opacity: state === "complete" ? 0 : 1 }}
+      transition={{ duration: 0.65, ease: "easeInOut" }}
+      style={{ minHeight: "100svh", cursor: state === "closed" ? "pointer" : "default" }}
+    >
+      <img
+        src={envelopeClosed.url}
+        alt="Sealed wedding envelope"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        style={{ opacity: state === "closed" ? 1 : 0, transition: "opacity 120ms linear" }}
+      />
+      <video
+        ref={videoRef}
+        src={envelopeOpening.url}
+        muted
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        controls={false}
+        onEnded={finish}
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        style={{ opacity: state === "closed" ? 0 : 1, transition: "opacity 180ms linear" }}
+      />
+    </motion.div>
   );
 }
+
