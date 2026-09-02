@@ -59,7 +59,19 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-champagne: var(--champagne);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-beige: var(--beige);
+  --color-deep: var(--deep-text);
+  --color-soft-white: var(--soft-white);
+  --font-script: "Great Vibes", cursive;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Cormorant Garamond", Georgia, serif;
 }
+
 
 :root {
   --radius: 0.25rem;
