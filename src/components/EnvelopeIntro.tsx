@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-import envelopeClosed from "@/assets/envelope-closed.png.asset.json";
-import envelopeOpening from "@/assets/envelope-opening.mp4.asset.json";
+import envelopeClosed from "@/assets/white_envlop.png";
+import envelopeOpening from "@/assets/envelope.mp4";
 
 export type IntroState = "closed" | "opening" | "complete";
 
@@ -58,14 +58,14 @@ export function EnvelopeIntro({ onComplete }: { onComplete: () => void }) {
       style={{ minHeight: "100svh", cursor: state === "closed" ? "pointer" : "default" }}
     >
       <img
-        src={envelopeClosed.url}
+        src={envelopeClosed}
         alt="Sealed wedding envelope"
         className="absolute inset-0 h-full w-full object-cover object-center"
         style={{ opacity: state === "closed" ? 1 : 0, transition: "opacity 120ms linear" }}
       />
       <video
         ref={videoRef}
-        src={envelopeOpening.url}
+        src={envelopeOpening}
         muted
         playsInline
         preload="auto"

@@ -48,16 +48,16 @@ function Index() {
         transition={{ duration: 0.9, ease: "easeInOut" }}
       >
         <HeroSection start={introDone} />
-        <SaveTheDate />
         <ScratchReveal />
         <InvitationMessage />
         <EventTimeline />
-        <Countdown />
+        <SaveTheDate />
+        {/* <Countdown /> */}
         <VenueSection />
         <DressCode />
         <GuestInfo />
-        <RSVP />
-        <Wishes />
+        {/* <RSVP /> */}
+        {/* <Wishes /> */}
         <Footer />
       </motion.div>
 
