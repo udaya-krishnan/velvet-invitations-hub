@@ -20,21 +20,28 @@ export function EnvelopeIntro({ onComplete }: { onComplete: () => void }) {
     };
   }, []);
 
-  const open = () => {
-    if (state !== "closed") return;
-    setState("opening");
-    const v = videoRef.current;
-    if (v) {
-      v.currentTime = 0;
-      void v.play().catch(() => setState("complete"));
-    }
-  };
+  const finishRef = useRef<() => void>(() => {});
 
   const finish = () => {
     setState("complete");
     // Let the crossfade breathe before the intro unmounts.
     window.setTimeout(onComplete, 650);
   };
+  finishRef.current = finish;
+
+  const open = () => {
+    if (state !== "closed") return;
+    setState("opening");
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      // If playback can't start, don't trap the guest on the envelope.
+      void v.play().catch(() => finishRef.current());
+    } else {
+      finish();
+    }
+  };
+
 
   return (
     <motion.div
