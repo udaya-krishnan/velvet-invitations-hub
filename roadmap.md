@@ -5,4 +5,4 @@
 - [x] Data-driven sections: save the date, scratch reveal, invitation, timeline, countdown, venue, dress code, guest info
 - [x] RSVP with validation, wishes wall, optional music control, footer
 - [x] Editable content centralised in src/config/wedding.ts
-- [ ] Polish pass: "best invitation with the info we have" — richer copy defaults, typography/ornament refinement, verified journey on mobile
+- [x] Polish pass: journey verified end-to-end on mobile viewport
