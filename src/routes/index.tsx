@@ -15,7 +15,6 @@ import { RSVP } from "@/components/RSVP";
 import { SaveTheDate } from "@/components/SaveTheDate";
 import { ScratchReveal } from "@/components/ScratchReveal";
 import { VenueSection } from "@/components/VenueSection";
-import { VenueSectionSpacer } from "@/components/Ornament";
 import { Wishes } from "@/components/Wishes";
 import { wedding } from "@/config/wedding";
 
