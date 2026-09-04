@@ -72,6 +72,7 @@ export function EnvelopeIntro({ onComplete }: { onComplete: () => void }) {
         disablePictureInPicture
         controls={false}
         onEnded={finish}
+        onError={finish}
         className="absolute inset-0 h-full w-full object-cover object-center"
         style={{ opacity: state === "closed" ? 0 : 1, transition: "opacity 180ms linear" }}
       />
